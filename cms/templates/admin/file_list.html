@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        function file_del(obj, id) {
+            $.ajax({
+                type: 'POST',
+                url:'{{ url_for('admin.file_del') }}',
+                data:{
+                    id:id
+                },
+                success:function (data) {
+                    if (data.status == 200){
+                        $(obj).parents('tr').remove();
+                    }
+                },
+                error:function (data) {
+
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<h2>文件列表</h2>
+{% if message %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名称</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        {{ message | safe }}
+    </table>
+{% endif %}
+</body>
+</html>

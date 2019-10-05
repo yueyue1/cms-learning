@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>这是主页</h2>
+<a href="{{ url_for('admin.file_list') }}">文件列表</a>
+<br>
+<label>上传文件</label>
+<form action="{{ url_for('uploader.upload') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <br>
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
