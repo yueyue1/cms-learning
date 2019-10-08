@@ -8,7 +8,7 @@ bp = Blueprint('front',__name__)
 
 @bp.route('/')
 def index():
-    return '这是前台'
+    return render_template('front/index.html')
 
 @bp.after_app_request
 def after_request(response):
