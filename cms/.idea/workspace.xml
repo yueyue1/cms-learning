@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d91805d8-28c1-4713-9543-8f322b220447" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +81,8 @@
       <workItem from="1570111618842" duration="15178000" />
       <workItem from="1570181253875" duration="2145000" />
       <workItem from="1570243690609" duration="474000" />
-      <workItem from="1570519770155" duration="1419000" />
+      <workItem from="1570519770155" duration="1597000" />
+      <workItem from="1570541529321" duration="2608000" />
     </task>
     <servers />
   </component>
@@ -100,6 +103,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cms$cms.coverage" NAME="cms Coverage Results" MODIFIED="1570520755212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cms$cms.coverage" NAME="cms Coverage Results" MODIFIED="1570544074474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -1,16 +1,39 @@
-from flask import Blueprint,render_template, send_from_directory,request,jsonify
+from flask import Blueprint,render_template, send_from_directory,request,jsonify,session
 import os
 from exts import db
 from .models import File
 from .recursion import create_file_list
 import config
+from .forms import LoginForm
+from .models import Users
+from .decorators import login_required
 
 bp = Blueprint('admin', __name__, url_prefix='/admin')
 
 
 @bp.route('/')
+@login_required
 def hello():
     return render_template('admin/index.html')
+
+@bp.route('/login',methods=['POST','GET'])
+def login():
+    if request.method == 'GET':
+        form = LoginForm()
+        return render_template('admin/login.html',form=form)
+    else:
+        form = LoginForm(request.form)
+        if form.validate():
+            username = request.form.get('username')
+            password = request.form.get('password')
+            user = Users.query.filter(Users.username == username).first()
+            if user and user.check_password(password):
+                session[config.ADMIN_USER_ID] = username
+            else:
+                errors = '用户名密码不对，请不要乱写'
+                return render_template('admin/login.html',errors=errors)
+        else:
+            return render_template('admin/login.html',errors=form.errors)
 
 
 @bp.route('/file_down',methods=['GET'])

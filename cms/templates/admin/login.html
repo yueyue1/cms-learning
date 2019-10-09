@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>登陆</h2>
+<form method="post" action="">
+    <label>用户名：</label>
+    <input type="text" name="username" id="username">
+    <br/>
+    <label>密码：</label>
+    <input type="text" name="password" id="password">
+    <br/>
+    {% if errors %}
+        <label style="color:red">
+          {{ errors }}
+        </label>
+        <br/>
+    {% endif %}
+    <button type="submit">确定</button>
+</form>
+
+</body>
+</html>
